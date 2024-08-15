@@ -94,9 +94,7 @@ class LangSAM():
                                          image=image_trans,
                                          caption=text_prompt,
                                          box_threshold=box_threshold,
-                                         text_threshold=text_threshold,
-                                         remove_combined=self.return_prompts,
-                                         device=self.device)
+                                         text_threshold=text_threshold)
         W, H = image_pil.size
         boxes = box_ops.box_cxcywh_to_xyxy(boxes) * torch.Tensor([W, H, W, H])
 
